@@ -22,4 +22,28 @@ public class TestNewStreams  {
         newStreams.java9Iterate();
     }
 
+    @Test
+    public void testJava9OfNullable1() {
+        NewStreams newStreams = new NewStreams();
+        newStreams.java9OfNullable1();
+    }
+
+    @Test
+    public void testJava9OfNullable2() {
+        NewStreams newStreams = new NewStreams();
+        newStreams.java9OfNullable2();
+    }
+
+    @Test
+    public void testJava9OfNullable3() {
+        NewStreams newStreams = new NewStreams();
+        newStreams.java9OfNullable3();
+    }
+
+    @Test
+    public void testJava9OfNullable4() {
+        NewStreams newStreams = new NewStreams();
+        newStreams.java9OfNullable4();
+    }
+
 }

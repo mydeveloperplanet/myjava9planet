@@ -24,22 +24,22 @@ public class NewStreams {
 
     public void java9OfNullable1() {
         Customer customer = new Customer();
-        Stream.of(customer).flatMap(Customer::getFruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+        Stream.of(customer).flatMap(Customer::fruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
     }
 
     public void java9OfNullable2() {
         Customer customer = null;
-        Stream.of(customer).flatMap(Customer::getFruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+        Stream.of(customer).flatMap(Customer::fruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
     }
 
     public void java9OfNullable3() {
         Customer customer = new Customer();
-        Stream.ofNullable(customer).flatMap(Customer::getFruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+        Stream.ofNullable(customer).flatMap(Customer::fruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
     }
 
     public void java9OfNullable4() {
         Customer customer = null;
-        Stream.ofNullable(customer).flatMap(Customer::getFruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+        Stream.ofNullable(customer).flatMap(Customer::fruits).dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
     }
 
 }

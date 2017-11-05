@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 public class Customer {
 
-    public Stream<String> getFruits() {
+    public Stream<String> fruits() {
         return Stream.of("apple", "lemon", "pineapple", "orange");
     }
 

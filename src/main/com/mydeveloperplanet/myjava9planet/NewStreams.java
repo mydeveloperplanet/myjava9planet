@@ -1,8 +1,5 @@
 package com.mydeveloperplanet.myjava9planet;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -11,16 +8,18 @@ import java.util.stream.Stream;
  */
 public class NewStreams {
 
-    public void java9DropWhile() {
-        Stream.of("apple", "lemon", "pineapple", "orange").dropWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+    public Stream<String> java9DropWhile() {
+        Stream<String> fruits = Stream.of("apple", "lemon", "pineapple", "orange").dropWhile(s -> !s.equals("pineapple"));
+        return fruits;
     }
 
-    public void java9TakeWhile() {
-        Stream.of("apple", "lemon", "pineapple", "orange").takeWhile(s -> !s.equals("pineapple")).forEach(System.out::println);
+    public Stream<String> java9TakeWhile() {
+        Stream<String> fruits = Stream.of("apple", "lemon", "pineapple", "orange").takeWhile(s -> !s.equals("pineapple"));
+        return fruits;
     }
 
-    public void java9Iterate() {
-        IntStream.iterate(0, x -> x < 10, x -> x + 2).forEach(System.out::println);
+    public IntStream java9Iterate() {
+        return IntStream.iterate(0, x -> x < 10, x -> x + 2);
     }
 
     public void java9OfNullable1() {

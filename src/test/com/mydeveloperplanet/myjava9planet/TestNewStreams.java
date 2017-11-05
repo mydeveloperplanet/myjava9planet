@@ -12,6 +12,8 @@ public class TestNewStreams  {
 
     private static final String[] UP_TO_PINEAPPLE = {"apple", "lemon"};
 
+    private static final String[] EMPTY_ARRAY = {};
+
     private static final int[] ITERATE_ARRAY = {0, 2, 4, 6, 8};
 
     @Test
@@ -38,25 +40,29 @@ public class TestNewStreams  {
     @Test
     public void testJava9OfNullable1() {
         NewStreams newStreams = new NewStreams();
-        newStreams.java9OfNullable1();
+        Stream<String> fruits = newStreams.java9OfNullable1();
+        Assert.assertArrayEquals(FROM_PINEAPPLE, fruits.toArray());
     }
 
-    @Test
+    @Test(expected=NullPointerException.class)
     public void testJava9OfNullable2() {
         NewStreams newStreams = new NewStreams();
-        newStreams.java9OfNullable2();
+        Stream<String> fruits = newStreams.java9OfNullable2();
+        Assert.assertArrayEquals(FROM_PINEAPPLE, fruits.toArray());
     }
 
     @Test
     public void testJava9OfNullable3() {
         NewStreams newStreams = new NewStreams();
-        newStreams.java9OfNullable3();
+        Stream<String> fruits = newStreams.java9OfNullable3();
+        Assert.assertArrayEquals(FROM_PINEAPPLE, fruits.toArray());
     }
 
     @Test
     public void testJava9OfNullable4() {
         NewStreams newStreams = new NewStreams();
-        newStreams.java9OfNullable4();
+        Stream<String> fruits = newStreams.java9OfNullable4();
+        Assert.assertArrayEquals(EMPTY_ARRAY, fruits.toArray());
     }
 
 }
